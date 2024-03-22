@@ -1,0 +1,186 @@
+# Project information
+site_name: my experience repository
+site_description: 个人知识库
+site_url:
+site_author: kouzhenyang
+docs_dir: docs
+site_dir: site
+# Repository
+repo_name: OMG1-1/experience
+repo_url: https://github.com/OMG1-1/experience
+edit_uri: https://github.com/OMG1-1/experience/tree/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2023 Kobe
+
+# Configuration
+theme:
+  name: material
+  custom_dir: overrides
+  language: zh
+  features:
+    - content.action.edit
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - navigation.indexes
+    - navigation.instant
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: white
+      toggle:
+        icon: material/theme-light-dark
+        name: Switch to dark mode
+    - scheme: slate
+      primary: grey
+      toggle:
+        icon: material/theme-light-dark
+        name: Switch to light mode
+  font:
+    text: Noto Sans SC
+    code: Fira Code
+  favicon: assets/images/favicon.ico
+  logo: assets/images/logo.png
+  icon:
+    logo: logo
+    repo: fontawesome/brands/github
+    edit: material/file-edit-outline
+    annotation: material/leaf-circle
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/OMG1-1
+  generator: false
+  status:
+    new: 最近添加
+
+# Plugins
+plugins:
+  - search
+  # - mermaid2:
+  #     version: 10.0.2
+  - git-revision-date-localized:
+      type: datetime
+      enable_creation_date: true
+      timezone: Asia/Shanghai
+      fallback_to_build_date: true
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  # 自动解释-引用
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/extra.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # - javascripts/katex.js
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+
+extra_css:
+  - stylesheets/extra.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+
+# Page tree
+nav:
+  - 思维跳动与成长:
+      - 01_thinking_and_grow/index.md
+      - 摆脱弱者思维: 01_thinking_and_grow/weakling_mentality.md
+      - 工作小技巧: 01_thinking_and_grow/work_tips.md
+      - 生活小贴士: 01_thinking_and_grow/life_tips.md
+      - 学习小贴士: 01_thinking_and_grow/study_tips.md
+  - 经典管理工具:
+      - 5W1H: 02_target_management/5w1h.md
+      - 6W2H: 02_target_management/6w2h.md
+      - SMART原则: 02_target_management/smart.md
+      - PDCA循环规则: 02_target_management/pdca.md
+      - SWOT分析法: 02_target_management/swot.md
+      - WBS任务分解法: 02_target_management/wbs.md
+      - 二八原则: 02_target_management/28_principle.md
+
+  - 时间管理:
+      # [icon: material/calendar-today]
+      - 03_time_management/index.md
+      - 时间管理理论: 03_time_management/theory.md
+      - 时间管理流程: 03_time_management/process.md # 收集、整理、归纳
+      - 时间管理工具: 03_time_management/tools.md # 日历、清单、笔记
+      - 时间管理方法: 03_time_management/methods.md # 时间弹性的--清单 时间具体的--任务 时间管理的--计划
+      - 时间管理视角: 03_time_management/perspective.md # 日、周、月、季度、年
+  - 知识库:
+      - 05_knowledge_base/index.md
+      - 工具集: 05_knowledge_base/handly_tool_library.md
+      # - 编程语言:
+      # - Java: 05_knowledge_base/programming_language/java.md
+      # - Python: 05_knowledge_base/programming_language/python.md
+      # - Scala: 05_knowledge_base/programming_language/scala.md
+      - 数据结构与算法:
+          - 05_knowledge_base/algorithm/index.md
+      # - 设计模式:
+      # - 05_knowledge_base/design_pattern/index.md
+      # - 开发工具:
+      # - 05_knowledge_base/development_tools/index.md
+      - 网站开发:
+          - 05_knowledge_base/website_development/index.md
+          - 前言: 05_knowledge_base/website_development/perface.md # 目标是什么？（独立开发一个网站） /
+          - 经验积累: 05_knowledge_base/website_development/experience.md
+          # - Spring全家桶: # 学习目的是什么？（更好的完成工作&技术拔高） /
+          # - 05_knowledge_base/website_development/spring/index.md
+          # - Spring MVC: 05_knowledge_base/website_development/spring/spring_mvc.md
+          # - Spring Boot: 05_knowledge_base/website_development/spring/spring_boot.md
+          # - Spring Cloud: 05_knowledge_base/website_development/spring/spring_cloud.md
+          # - Spring Security: 05_knowledge_base/website_development/spring/spring_security.md
+          # - Spring Data: 05_knowledge_base/website_development/spring/spring_data.md
+          # - Spring Web: 05_knowledge_base/website_development/spring/spring_web.md
+          # - Spring Boot Actuator: 05_knowledge_base/website_development/spring/spring_boot_actuator.md
+          # - Spring Cloud Gateway: 05_knowledge_base/website_development/spring/spring_cloud_gateway.md
+          # - Spring Cloud Stream: 05_knowledge_base/website_development/spring/spring_cloud_stream.md
+          # - 其他技术:
+          # - 05_knowledge_base/website_development/other_tech/index.md
+          # - Jhipster: 05_knowledge_base/website_development/other_tech/jhipster.md
+      # - 数据库:
+      # - MySQL: 05_knowledge_base/database/mysql.md
+      # - PostgreSQL: 05_knowledge_base/database/postgresql.md
+      # - Redis: 05_knowledge_base/database/redis.md
+      # - MongoDB: 05_knowledge_base/database/mongodb.md
+      # - Elasticsearch: 05_knowledge_base/database/elasticsearch.md
+      # - Hive: 05_knowledge_base/database/hive.md
